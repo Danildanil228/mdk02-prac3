@@ -1,23 +1,20 @@
 ﻿//шаблонный метод
-class Program
-{
-    static void Main()
-    {
-        // базовые генераторы отчетов в разных форматах, вызов переопределенных методов
-        ReportGenerator pdfReport = new PdfReportGenerator();
-        pdfReport.GenerateReport();
 
-        Console.WriteLine();
+    
+// базовые генераторы отчетов в разных форматах, вызов переопределенных методов
+ReportGenerator pdfReport = new PdfReportGenerator();
+pdfReport.GenerateReport();
 
-        ReportGenerator excelReport = new ExcelReportGenerator();
-        excelReport.GenerateReport();
+Console.WriteLine();
 
-        Console.WriteLine();
+ReportGenerator excelReport = new ExcelReportGenerator();
+excelReport.GenerateReport();
 
-        ReportGenerator htmlReport = new HtmlReportGenerator();
-        htmlReport.GenerateReport();
-    }
-}
+Console.WriteLine();
+
+ReportGenerator htmlReport = new HtmlReportGenerator();
+htmlReport.GenerateReport();
+
 
 // методы, 
 abstract class ReportGenerator
